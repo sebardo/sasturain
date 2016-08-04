@@ -22,7 +22,6 @@ class AppKernel extends Kernel
 
             new CoreBundle\CoreBundle(),
             new AdminBundle\AdminBundle(),
-            new BlogBundle\BlogBundle(),
             new EcommerceBundle\EcommerceBundle()
         );
 

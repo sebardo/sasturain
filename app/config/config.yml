@@ -78,7 +78,7 @@ assetic:
     debug:          "%kernel.debug%"
     use_controller: '%kernel.debug%'
     bundles:
-        [ CoreBundle, AdminBundle, BlogBundle, EcommerceBundle ]
+        [ CoreBundle, AdminBundle, EcommerceBundle ]
     node: "%node_path%"
     filters:
         cssrewrite:
