@@ -25,9 +25,7 @@
         "incenteev/composer-parameter-handler": "~2.0",
 
         "sebardo/blog": "dev-master",
-        "sebardo/ecommerce": "dev-master",
-        "a2lix/i18n-doctrine-bundle": "^0.1.0",
-        "a2lix/translation-form-bundle": "^2.1"
+        "sebardo/ecommerce": "dev-master"
 
     },
     "require-dev": {
