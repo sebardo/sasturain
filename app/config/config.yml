@@ -151,7 +151,10 @@ admin:
                 oauth2_client_secret: lo04F5hvUi_gPaAxyucY70jy
                 oauth2_redirect_uri: 'http://sasturain.dev/admin/analytics'
                 developer_key: AIzaSyCda_bsJ-kEa1M1DJenwKfUfyLVlVKuC6I
-            
+ 
+blog:
+#    fixture_data: true    
+
 ecommerce:
 #    fixture_data: true
 #    currency_symbol: €
