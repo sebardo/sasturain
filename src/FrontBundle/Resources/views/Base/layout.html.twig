@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        {% block meta_viewport %}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        {% endblock %}
+        <title>{% block title %}{% if page_title is defined %} {{ page_title }} &raquo; {% endif %}Website{% endblock %}</title>
+        <meta name="description" content="My porfolio" />
+	<meta name="keywords" content="dario sebatian asurain, sebastian sasturain, sasturain, personal web, porfolio" />
+	<meta name="author" content="Dario Sebastian Sasturain" />
+        
+        <!-- Favicons (created with http://realfavicongenerator.net/)-->
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
+	<link rel="apple-touch-icon" sizes="57x57" href="/bundles/front/img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/bundles/front/img/favicons/apple-touch-icon-60x60.png">
+	<link rel="icon" type="image/png" href="/bundles/front/img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/bundles/front/img/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="img/favicons/manifest.json">
+	<link rel="shortcut icon" href="/bundles/front/img/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#00a8ff">
+	<meta name="msapplication-config" content="/bundles/front/img/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+        
+        {% block stylesheets %}
+
+            {% stylesheets
+                'bundles/front/css/normalize.css'
+                'bundles/front/css/bootstrap.css'
+                'bundles/front/css/owl.css'
+                'bundles/front/css/animate.css'
+                'bundles/front/fonts/font-awesome-4.1.0/css/font-awesome.min.css'
+                'bundles/front/fonts/eleganticons/et-icons.css'
+                'bundles/front/css/cardio.css'
+            %}
+                <link rel="stylesheet" href="{{ asset_url }}">
+            {% endstylesheets %}
+
+        {% endblock %}
+
+         
+        
+        {% block head %}{% endblock %}
+    </head>
+
+    {% block body %}
+    <body class="core-body {% block body_class %}{% endblock %}">
+        
+        {% block header %}
+            <div class="preloader">
+                <img src="/bundles/front/img/loader.gif" alt="Preloader image">
+            </div>
+            <nav class="navbar">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand logo" href="#">_sasturain.com</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right main-nav">
+                            <li><a href="#home">Inicio</a></li>
+                            <li><a href="#about">A cerca de mi</a></li>
+                            <li><a href="#services">Servicios</a></li>
+                            <li><a href="#pricing">Precios</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Registrate</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+            <header id="home">
+                <div class="container">
+                    <div class="table">
+                        <div class="header-text">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <h3 class="light white">Toma el control de tu presencia en internet</h3>
+                                    <h1 class="white typed">Tu felicidad nos hace felices</h1>
+                                    <span class="typed-cursor">|</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        {% endblock %}
+        
+        {% block content %}
+            
+            
+        {% endblock %}
+        
+        {% block footer %}
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 text-center-mobile">
+                            <h3 class="white">Solicita tu prueba gratis</h3>
+                            <h5 class="light regular light-white">Nuestros modulos se actualizan semanalmente</h5>
+                            <a href="#" class="btn btn-blue ripple trial-button">Comienza tu prueba gratis</a>
+                        </div>
+                        <div class="col-sm-6 text-center-mobile">
+                            <h3 class="white">Horarios de atención <span class="open-blink"></span></h3>
+                            <div class="row opening-hours">
+                                <div class="col-sm-6 text-center-mobile">
+                                    <h5 class="light-white light">Lun - Vie</h5>
+                                    <h3 class="regular white">9:00 - 18:00</h3>
+                                </div>
+                                <div class="col-sm-6 text-center-mobile">
+                                    <h5 class="light-white light">Sab - Dom</h5>
+                                    <h3 class="regular white">en la playa</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bottom-footer text-center-mobile">
+                        <div class="col-sm-8">
+                            <p>&copy; 2016 Todos los derechos reservados. Template desarrollado por <a href="http://www.phir.co/">PHIr</a> para <a href="http://tympanus.net/codrops/">Codrops</a></p>
+                        </div>
+                        <div class="col-sm-4 text-right text-center-mobile">
+                            <ul class="social-footer">
+                                <li><a href="http://www.facebook.com/pages/Codrops/159107397912"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="http://www.twitter.com/codrops"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://plus.google.com/101095823814290637419"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- Holder for mobile navigation -->
+            <div class="mobile-nav">
+                <ul>
+                </ul>
+                <a href="#" class="close-link"><i class="arrow_up"></i></a>
+            </div>
+        {% endblock %}
+        
+        {% block javascripts %}
+            
+            {% javascripts
+                'bundles/front/js/jquery-1.11.1.min.js'
+                'bundles/front/js/owl.carousel.min.js'
+                'bundles/front/js/bootstrap.min.js'
+                'bundles/front/js/wow.min.js'
+                'bundles/front/js/typewriter.js'
+                'bundles/front/js/jquery.onepagenav.js'
+                'bundles/front/js/main.js'
+            %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+           
+        {% endblock %}
+    </body>
+    {% endblock %}
+</html>

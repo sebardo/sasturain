@@ -13,3 +13,8 @@ blog:
 ecommerce:
     resource: "@EcommerceBundle/Resources/config/routing.yml"
     prefix:   /
+    
+front:
+    resource: "@FrontBundle/Controller/"
+    type:     annotation
+    prefix:   /
