@@ -336,7 +336,7 @@ section {
 .intro-table-hover {
 	-webkit-transition: background-image 0.3s ease, background-position 0.3s;
 	transition: background-image 0.3s ease, background-position 0.3s;
-	background-image: url('../img/table-2.jpg');
+	background-image: url('../img/table-23.jpg');
 }
 
 .intro-table-hover h4 {
@@ -347,7 +347,7 @@ section {
 }
 
 .intro-table-hover:hover {
-	background-image: url('../img/table-2-hover.jpg');
+	background-image: url('../img/table-23-hover.jpg');
 	background-position: 50% 50%;
 }
 
@@ -557,7 +557,7 @@ section {
 /* Pricing */
 
 #pricing {
-	background: #00a8ff url('../img/pricing1.jpg') no-repeat center center;
+	background: #00a8ff url('../img/pricing22.jpg') no-repeat center center;
 	-webkit-background-size: cover;
 	background-size: cover;
 	-webkit-transition: background-image 0.6s linear 0.3s;
@@ -663,10 +663,8 @@ section {
 /* Footer */
 
 footer {
-	padding: 140px 0 40px;
-	background: url('../img/footer.jpg');
-	-webkit-background-size: cover;
-	background-size: cover;
+    padding: 40px 0 40px;
+    background-color: #2b2b43;
 }
 
 footer .trial-button {
@@ -706,10 +704,6 @@ footer .open-blink:before {
 
 footer .opening-hours {
 	margin-top: 60px;
-}
-
-footer .bottom-footer {
-	margin-top: 150px;
 }
 
 footer .social-footer {
