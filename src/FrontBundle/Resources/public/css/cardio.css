@@ -556,7 +556,7 @@ section {
 }
 /* Pricing */
 
-#pricing {
+.section.pricing {
 	background: #00a8ff url('../img/pricing22.jpg') no-repeat center center;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -988,10 +988,13 @@ footer .social-footer li:hover a {
 	padding: 0 20px;
 }
 
-.light {
+.light,.light p {
 	font-weight: 300;
+        
 }
-
+.muted.light p{
+    font-size: 24px;
+}
 .regular {
 	font-weight: 400;
 }
@@ -1025,7 +1028,7 @@ footer .social-footer li:hover a {
 	background: #00a8ff;
 }
 
-.muted {
+.muted, .muted p {
 	color: #989da0;
 }
 

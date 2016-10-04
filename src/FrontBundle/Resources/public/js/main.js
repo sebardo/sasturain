@@ -99,8 +99,8 @@ jQuery(function($) {
 		$('.pricing .box-second').removeClass('active');
 		$(this).addClass('active');
 		$(this).next($('.box-second')).addClass('active');
-		$('#pricing').css("background-image", "url(" + $(this).data('img') + ")");
-		$('#pricing').css("background-size", "cover");
+		$('.section.pricing').css("background-image", "url(" + $(this).data('img') + ")");
+		$('.section.pricing').css("background-size", "cover");
 	});
 
 	// Mobile Nav

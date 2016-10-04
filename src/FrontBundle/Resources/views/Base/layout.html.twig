@@ -33,6 +33,7 @@
                 'bundles/front/fonts/font-awesome-4.1.0/css/font-awesome.min.css'
                 'bundles/front/fonts/eleganticons/et-icons.css'
                 'bundles/front/css/cardio.css'
+                'bundles/front/less/custom.less'
             %}
                 <link rel="stylesheet" href="{{ asset_url }}">
             {% endstylesheets %}
@@ -53,27 +54,7 @@
             </div>
             <nav class="navbar">
                 <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand logo" href="#">_sasturain.com</a>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right main-nav">
-                            <li><a href="#home">Inicio</a></li>
-                            <li><a href="#about">A cerca de mi</a></li>
-                            <li><a href="#services">Servicios</a></li>
-                            <li><a href="#pricing">Precios</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Registrate</a></li>
-                        </ul>
-                    </div>
-                    <!-- /.navbar-collapse -->
+                    {% include 'FrontBundle:Base:menu.html.twig' %}
                 </div>
                 <!-- /.container-fluid -->
             </nav>
@@ -94,10 +75,14 @@
             </header>
         {% endblock %}
         
-        {% block content %}
+        <div class="container-fluid">
+            <div class="row">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
             
             
-        {% endblock %}
+         
         
         {% block footer %}
             <footer>

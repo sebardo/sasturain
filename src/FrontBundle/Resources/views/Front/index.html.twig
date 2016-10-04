@@ -6,91 +6,6 @@
         <div class="cut cut-top"></div>
         <div class="container">
             <div class="row intro-tables">
-                {#<div class="col-md-4">
-                    <div class="intro-table intro-table-first">
-                        <h5 class="white heading">Today's Schedule</h5>
-                        <div class="owl-carousel owl-schedule bottom">
-                            <div class="item">
-                                <div class="schedule-row row">
-                                    <div class="col-xs-6">
-                                        <h5 class="regular white">Early Exercise</h5>
-                                    </div>
-                                    <div class="col-xs-6 text-right">
-                                        <h5 class="white">8:30 - 10:00</h5>
-                                    </div>
-                                </div>
-                                <div class="schedule-row row">
-                                    <div class="col-xs-6">
-                                        <h5 class="regular white">Muscle Building</h5>
-                                    </div>
-                                    <div class="col-xs-6 text-right">
-                                        <h5 class="white">8:30 - 10:00</h5>
-                                    </div>
-                                </div>
-                                <div class="schedule-row row">
-                                    <div class="col-xs-6">
-                                        <h5 class="regular white">Cardio</h5>
-                                    </div>
-                                    <div class="col-xs-6 text-right">
-                                        <h5 class="white">8:30 - 10:00</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="schedule-row row">
-                                    <div class="col-xs-6">
-                                        <h5 class="regular white">Early Exercise</h5>
-                                    </div>
-                                    <div class="col-xs-6 text-right">
-                                        <h5 class="white">8:30 - 10:00</h5>
-                                    </div>
-                                </div>
-                                <div class="schedule-row row">
-                                    <div class="col-xs-6">
-                                        <h5 class="regular white">Muscle Building</h5>
-                                    </div>
-                                    <div class="col-xs-6 text-right">
-                                        <h5 class="white">8:30 - 10:00</h5>
-                                    </div>
-                                </div>
-                                <div class="schedule-row row">
-                                    <div class="col-xs-6">
-                                        <h5 class="regular white">Cardio</h5>
-                                    </div>
-                                    <div class="col-xs-6 text-right">
-                                        <h5 class="white">8:30 - 10:00</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="schedule-row row">
-                                    <div class="col-xs-6">
-                                        <h5 class="regular white">Early Exercise</h5>
-                                    </div>
-                                    <div class="col-xs-6 text-right">
-                                        <h5 class="white">8:30 - 10:00</h5>
-                                    </div>
-                                </div>
-                                <div class="schedule-row row">
-                                    <div class="col-xs-6">
-                                        <h5 class="regular white">Muscle Building</h5>
-                                    </div>
-                                    <div class="col-xs-6 text-right">
-                                        <h5 class="white">8:30 - 10:00</h5>
-                                    </div>
-                                </div>
-                                <div class="schedule-row row">
-                                    <div class="col-xs-6">
-                                        <h5 class="regular white">Cardio</h5>
-                                    </div>
-                                    <div class="col-xs-6 text-right">
-                                        <h5 class="white">8:30 - 10:00</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>#}
                 <div class="col-md-8">
                     <div class="intro-table intro-table-hover">
                         <h5 class="white heading hide-hover">Membrecia Premium</h5>
@@ -123,135 +38,22 @@
             </div>
         </div>
     </section>
-    <section id="about" class="section gray-bg">
+    {% set items = get_menu_items(true) %}
+    {% for item in items %}
+        <section id="{{item.slug}}" class="section {{item.className}}">
             <div class="container">
-                    <div class="row title text-center">
-                            <h2 class="margin-top">A cerca de mí</h2>
-                            <h4 class="light muted">Hablar de mi? ... todo muy subjetivo :D</h4>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8">
-                            <p>Me considero una persona pro-activa, siendo este mi punto fuerte y débil a la vez, soy sincero y amo el trabajo en grupo, creo en construir amistades que perduren a través del tiempo.</p>
-                            <p>Nací en Salta en las montañas de los Andes Argentina, vivo en Europa hace más de 5 años, Madrid, Barcelona, Marbella, Berlín y ahora Cádiz algunas de las ciudades en las que viví. "Aficionado a las montañas de nacimiento y a la naturaleza por elección y también músico de corazón." </p>
-                            <p>He tenido numerosas profesiones en mi vida pero la de programador es la que en este momento me acompaña y ya hace más de 10 años en conjunto con otras actividades como la de permacultura o el cuidado de animales (actualmente cumpliendo horas de voluntariado en el "Refugio de animales de granja <a href="http://elcortijillodelalola.org/" target="_blank"><img src="/bundles/front/img/cortijillo_de_la_lola.png" style="height: 32px;" alt="Cortijillo de la Lola" title="Cortijillo de la Lola"></a>")</p>
-                            <p>Trato de aplicar las mejores prácticas siempre, tanto en la programación, gestión, formación como en la vida, amplios conocimientos en symfony2, php, linux, git, bootstrap, jquery, css3, less y muchas tecnologías más.</p>
-                            <p>Me apasiona la investigación y seguir el constante ruedo de las nuevas tecnología, la flexibilidad en el trabajo me caracteriza con experiencia en manejo de grupos y me considero alguien en quien puedes confiar tu proyecto y obtener el mejor resultado.</p>
-                            <p><a href="https://www.infojobs.net/candidate/cv/view/index.xhtml" target="_blank">Ver mi Curriculum Vitae en <img src="/bundles/front/img/infojobs.png" style="height: 22px;"></a>  -  Descargar mi CV en <a href="/uploads/documents/cv_espana.pdf" target="_blank">español</a> / <a href="/uploads/documents/cv_ingles.pdf" target="_blank">inglés</a></p>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-            </div>
-    </section>
-    <section id="services" class="section section-padded">
-            <div class="container">
-                    <div class="row text-center title">
-                            <h2>Servicios</h2>
-                            <h4 class="light muted">Ofrecemos los mejores resultados al mejor precio</h4>
-                    </div>
-                    <div class="row services">
-                            <div class="col-md-4">
-                                    <div class="service">
-                                            <div class="icon-holder">
-                                                    <img src="/bundles/front/img/icons/heart-blue.png" alt="" class="icon">
-                                            </div>
-                                            <h4 class="heading">Hosting</h4>
-                                            <p class="description">Si buscas un lugar para alojar tu web o quieres una solucion integral, lo hacemos todo por tí.</p>
-                                    </div>
-                            </div>
-                            <div class="col-md-4">
-                                    <div class="service">
-                                            <div class="icon-holder">
-                                                    <img src="/bundles/front/img/icons/guru-blue.png" alt="" class="icon">
-                                            </div>
-                                            <h4 class="heading">Módulos Open Source</h4>
-                                            <p class="description">Contamos con módulos propios totalmente Open Sorce que nos permite darte mejores funcionalidades cada día.</p>
-                                    </div>
-                            </div>
-                            <div class="col-md-4">
-                                    <div class="service">
-                                            <div class="icon-holder">
-                                                    <img src="/bundles/front/img/icons/weight-blue.png" alt="" class="icon">
-                                            </div>
-                                            <h4 class="heading">Desarrollos a medida</h4>
-                                            <p class="description">Desarrollamos tu producto o proyecto a medida, obteniendo los mejores resultados en el menor tiempo y precio.</p>
-                                    </div>
-                            </div>
-                    </div>
-            </div>
-            <div class="cut cut-bottom"></div>
-    </section>
-    
-    <section id="pricing" class="section">
-        <div class="container">
-            <div class="row title text-center">
-                <h2 class="margin-top white">Precios</h2>
-                <h4 class="light white">Selecciona tu producto y/o plan favorito y registrate ahora!</h4>
-            </div>
-            <div class="row no-margin">
-                <div class="col-md-7 no-padding col-md-offset-5 pricings text-center">
-                    <div class="pricing">
-                        <div class="box-main active" data-img="/bundles/front/img/pricing22.jpg">
-                            <h4 class="white">Comercio virtual</h4>
-                            <h4 class="white regular light">300 € <span class="small-font">/ año</span></h4>
-                            <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Registrate ahora</a>
-                            <i class="info-icon icon_question"></i>
-                        </div>
-                        <div class="box-second active">
-                            <ul class="white-list text-left">
-                                <li>Dominio gratuito</li>
-                                <li>Productos ilimitados</li>
-                                <li>Estadísticas</li>
-                                <li>Diferentes metodos de pago</li>
-                                <li>Posicionamiento</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="pricing">
-                        <div class="box-main" data-img="/bundles/front/img/pricing22.jpg">
-                            <h4 class="white">Blog y presencia en internet</h4>
-                            <h4 class="white regular light">100 € <span class="small-font">/ año</span></h4>
-                            <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Registrate ahora</a>
-                            <i class="info-icon icon_question"></i>
-                        </div>
-                        <div class="box-second">
-                            <ul class="white-list text-left">
-                                <li>Dominio gratuito</li>
-                                <li>Gestor de publicaciones</li>
-                                <li>Estadísticas</li>
-                                <li>Posicionamiento</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="row title text-center">
+                    <h2>{{item.name}}</h2>
+                    <h4 class="light muted">{{item.shortDescription | raw}}</h4>
+                </div>
+                <div class="row">
+                    {{item.description | raw }}
                 </div>
             </div>
-        </div>
-    </section>
-    {#<section class="section section-padded blue-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="owl-twitter owl-carousel">
-                        <div class="item text-center">
-                            <i class="icon fa fa-twitter"></i>
-                            <h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
-                            <h4 class="light-white light">#health #training #exercise</h4>
-                        </div>
-                        <div class="item text-center">
-                            <i class="icon fa fa-twitter"></i>
-                            <h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
-                            <h4 class="light-white light">#health #training #exercise</h4>
-                        </div>
-                        <div class="item text-center">
-                            <i class="icon fa fa-twitter"></i>
-                            <h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
-                            <h4 class="light-white light">#health #training #exercise</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>#}
+            {% if item.id == 2 %}<div class="cut cut-bottom"></div>{% endif %}
+        </section>
+    {% endfor %}        
+   
     <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content modal-popup">
