@@ -54,6 +54,25 @@
         </section>
     {% endfor %}        
    
+    <!-- Blog -->
+    <section id="_blog" class="section">
+        <div class="cut cut-top"></div>
+        <div class="container container-blog">
+            <div class="row title text-center">
+                <h2>Blog</h2>
+                <h4 class="light muted">Cosas interesantes, no solo tecnología ;)</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-8 post-list" id="post-list">
+                    {{ blog_list() }}
+                </div>
+                <div class="col-md-4 post-sidebar">
+                  {% include 'BlogBundle:Blog:sidebar.html.twig'%}
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content modal-popup">
@@ -87,3 +106,11 @@
 
 {% endblock %}
  
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets
+            'bundles/blog/less/blog.less'
+    %}
+        <link rel="stylesheet" href="{{ asset_url }}">
+    {% endstylesheets %}
+{% endblock %}

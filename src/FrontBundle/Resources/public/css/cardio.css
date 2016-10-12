@@ -155,9 +155,13 @@ header .typed-cursor {
     font-family: "bt_mono", courier, monospace;
     color: #fff;
     text-decoration: underline;
-    font-size: 22px;
+    font-size: 22px!important;
+    padding: 0!important;
     font-weight: 900;
     margin-top: 10px;
+}
+.logo:hover{
+    color: #00a8ff;
 }
 .navbar-fixed-top .logo{
     color: #00a8ff;
@@ -991,6 +995,9 @@ footer .social-footer li:hover a {
 .light,.light p {
 	font-weight: 300;
         
+}
+.muted.light{
+    margin-bottom: 30px;
 }
 .muted.light p{
     font-size: 24px;
