@@ -25,7 +25,7 @@ body {
 
 .preloader {
 	position: fixed;
-	z-index: 9999;
+	z-index: 999;
 	width: 100%;
 	height: 100%;
 	background-color: white;
@@ -176,7 +176,7 @@ a {
 
 nav.navbar {
 	position: absolute;
-	z-index: 9500;
+	z-index: 950;
 	width: 100%;
 	width: 100vw;
 	-webkit-transition: all 0.3s ease;
@@ -188,7 +188,7 @@ nav.navbar .navbar-nav li.active a:not(.btn) {
 }
 
 nav.navbar-fixed-top {
-	z-index: 9499;
+	z-index: 949;
 	top: 0;
 	padding: 25px 0;
 	opacity: 0;
@@ -226,7 +226,7 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 	background: #00a8ff;
 }
 
-.btn.btn-blue:hover {
+.btn.btn-blue:hover,  .btn.btn-blue:focus{
 	background: #31b9ff;
 }
 
@@ -938,7 +938,7 @@ footer .social-footer li:hover a {
 /* Mobile Nav */
 .mobile-nav {
 	position: fixed;
-	z-index: 9999;
+	z-index: 999;
 	top: 0;
 	left: 0;
 	display: table;

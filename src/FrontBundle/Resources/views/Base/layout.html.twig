@@ -1,7 +1,10 @@
-{% extends 'CoreBundle:Base:base.layout.html.twig' %}
+{% extends 'CoreBundle:Base:bootstrap.custom.layout.html.twig' %}
 
-{% block stylesheets %}
-    
+{% block head %}
+    <meta name="description" content="My porfolio" />
+    <meta name="keywords" content="dario sebatian asurain, sebastian sasturain, sasturain, personal web, porfolio" />
+    <meta name="author" content="Dario Sebastian Sasturain" />
+
     <!-- Favicons (created with http://realfavicongenerator.net/)-->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
     <link rel="apple-touch-icon" sizes="57x57" href="/bundles/front/img/favicons/apple-touch-icon-57x57.png">
@@ -13,27 +16,23 @@
     <meta name="msapplication-TileColor" content="#00a8ff">
     <meta name="msapplication-config" content="/bundles/front/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    
+    
+{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
     {% stylesheets
         'bundles/front/css/normalize.css'
-        'bundles/front/css/bootstrap.css'
         'bundles/front/css/owl.css'
         'bundles/front/css/animate.css'
         'bundles/front/fonts/font-awesome-4.1.0/css/font-awesome.min.css'
         'bundles/front/fonts/eleganticons/et-icons.css'
         'bundles/front/css/cardio.css'
-    %}
-        <link rel="stylesheet" href="{{ asset_url }}">
-    {% endstylesheets %}
-
-    {{ parent() }}
-    
-    {% stylesheets
         'bundles/front/less/custom.less'
     %}
         <link rel="stylesheet" href="{{ asset_url }}">
     {% endstylesheets %}
-    
 {% endblock %}
 
 {% block body %}
@@ -121,10 +120,9 @@
         {% endblock %}
         
         {% block javascripts %}
-            
+            {{ parent() }}
             {% javascripts
                 'bundles/front/js/owl.carousel.min.js'
-                'bundles/front/js/bootstrap.min.js'
                 'bundles/front/js/wow.min.js'
                 'bundles/front/js/typewriter.js'
                 'bundles/front/js/jquery.onepagenav.js'
