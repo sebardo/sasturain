@@ -3,8 +3,8 @@
 {% block content %}
 
     <section>
-        <div class="cut cut-top"></div>
-        <div class="container">
+        <div class="cut cut-top" style="border-right: 30px solid #f7f7f7"></div>
+        <!--<div class="container">
             <div class="row intro-tables">
                 <div class="col-md-8">
                     <div class="intro-table intro-table-hover">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </section>
     {% set items = get_menu_items(true) %}
     {% for item in items %}
@@ -60,7 +60,7 @@
         <div class="container container-blog">
             <div class="row title text-center">
                 <h2>Blog</h2>
-                <h4 class="light muted">Cosas interesantes, no solo tecnología ;)</h4>
+                <h4 class="light muted">{{ 'home.blog.title' | trans }}</h4>
             </div>
             <div class="row">
                 <div class="col-md-8 post-list" id="post-list">
