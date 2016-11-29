@@ -10,7 +10,7 @@
 </div>
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <li class="container-language" style="float: right">{{ get_languages() }}</li>
+    <li class="container-language" style="float: right">{{ get_languages({'no_text': true}) }}</li>
     <ul class="nav navbar-nav navbar-right main-nav">
         <li><a href="#home">{{ 'home' | trans  }}</a></li>
         {% set items = get_menu_items(true) %}
@@ -36,7 +36,10 @@
                 </ul>
             </li>
         {% else %}
-            <li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Registrate</a></li>
+            <li class="btn btn-blue access">
+                <span data-toggle="modal" data-target="#modalLogin">{{ 'login.short' | trans }}</span> {{ 'or' | trans }} 
+                <span data-toggle="modal" data-target="#modalRegister" >{{ 'signup.first' | trans }}</span>
+            </li>
         {% endif %}
         
     </ul>

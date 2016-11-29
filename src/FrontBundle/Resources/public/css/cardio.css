@@ -227,7 +227,7 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 }
 
 .btn.btn-blue:hover,  .btn.btn-blue:focus{
-	background: #31b9ff;
+	/*background: #31b9ff;*/
 }
 
 .btn.btn-blue-fill {

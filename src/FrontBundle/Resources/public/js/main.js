@@ -162,7 +162,8 @@ jQuery(function($) {
 
 	$('.modal-popup .close-link').click(function(event){
 		event.preventDefault();
-		$('#modal1').modal('hide');
+		$('#modalLogin').modal('hide');
+                $('#modalRegister').modal('hide');
 	});
 
 	$(window).on("resize", function() {

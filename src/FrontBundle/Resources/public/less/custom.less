@@ -46,7 +46,10 @@
     margin-top: 70px;
 }
 .main-nav li a:hover,.main-nav li a:focus{
-    background-color: transparent!important;
+    background-color: transparent;
+}
+.main-nav li a.btn.btn-blue:hover,.main-nav li a.btn.btn-blue:focus{
+    background-color: transparent;
 }
 .container-login{
     padding: 5em 0;
@@ -71,10 +74,47 @@
     .btn-default > span{
         color: white;
     }
+    .btn.dropdown-toggle{
+        padding-right: 0;
+    }
+    .dropdown-menu{
+        min-width: 30px;
+    }
 }
 .navbar-fixed-top{
     .btn-default > span{
         color: #bbb;
+    }
+}
+.btn.btn-blue:hover{
+    background: #00a8ff!important;
+}
+
+/*********************/
+/****Access menu*****/
+/*********************/
+.access {
+    font-size: 17px;
+    display: inline-block;
+    padding: 11px 30px;
+    span:hover{
+        text-decoration: underline;
+    }
+}
+#modalLogin{
+    .modal-popup{
+        form.popup-form>div.row>div.pull-left, form.popup-form>div.row>div>a.pull-right{
+            color: #fff;
+            text-align: left;
+        }
+        .icheckbox_minimal-white{
+            border: 2px solid #fff;
+            width: 20px;
+            height: 20px;
+        }
+        .icheckbox_minimal-white.checked {
+            background-position: -41px -1px;
+        }
     }
 }
 /*
@@ -134,3 +174,11 @@ h6 {
     border-color: #fff;
 }
 */
+.subscribe {
+    .btn-primary{
+        background: #00a8ff;
+    }
+    .btn-primary:hover{
+        color: #fff;
+    }
+}
