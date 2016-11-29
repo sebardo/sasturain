@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand logo" href="#">_sasturain.com</a>
+    <a class="navbar-brand logo" href="/">_sasturain.com</a>
 </div>
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -29,12 +29,20 @@
         {% endfor %}
         <li><a href="#_blog">{{ 'blog.singular' | trans  }}</a></li>
         {% if app.user %}
-            <li ><a class="icon fa-user" href="#">{{ app.user.name }}</a>
-                <ul class="" style="-webkit-user-select: none; display: none; position: absolute;">
-                    <li><a href="{{ path('core_actor_profile') }}" style="display: block;">Perfil</a></li>
-                    <li><a href="{{ path('logout') }}" style="display: block;">Cerrar sesión</a></li>
+        
+        <!-- Single button -->
+            <li class="btn btn-blue profile-menu">
+              <div class="btn-group">
+                  <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="glyphicon glyphicon-user"></span> {{ app.user.name }} <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="{{ path('core_actor_profile') }}" style="display: block;">Perfil</a></li>
+                  <li><a href="{{ path('logout') }}" style="display: block;">Cerrar sesión</a></li>
                 </ul>
+              </div>
             </li>
+           
         {% else %}
             <li class="btn btn-blue access">
                 <span data-toggle="modal" data-target="#modalLogin">{{ 'login.short' | trans }}</span> {{ 'or' | trans }} 

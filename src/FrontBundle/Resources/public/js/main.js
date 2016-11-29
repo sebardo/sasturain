@@ -23,7 +23,7 @@ jQuery(function($) {
 			$('.parallax img').css('width', $('.parallax').height() * ratio + 'px');
 		}
 
-		$('header').height($(window).height() + 80);
+		$('.home header').height($(window).height() + 80);
 		$('section .cut').each(function() {
 			if ($(this).hasClass('cut-top'))
 				$(this).css('border-right-width', $(this).parent().width() + "px");
@@ -90,7 +90,7 @@ jQuery(function($) {
 
 	// Window Resize
 	$(window).resize(function() {
-		$('header').height($(window).height());
+		$('.home header').height($(window).height());
 	});
 
 	// Pricing Box Click Event
