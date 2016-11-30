@@ -51,9 +51,7 @@
 .main-nav li a.btn.btn-blue:hover,.main-nav li a.btn.btn-blue:focus{
     background-color: transparent;
 }
-.container-login{
-    padding: 5em 0;
-}
+
 /*********************/
 /******Language*******/
 /*********************/
@@ -90,56 +88,53 @@
     background: #00a8ff!important;
 }
 
+
 /*********************/
-/****Access menu*****/
+/********MENU*********/
 /*********************/
-.access {
-    font-size: 17px;
-    display: inline-block;
-    padding: 11px 30px;
-    span:hover{
-        text-decoration: underline;
-    }
-}
-#modalLogin{
-    .modal-popup{
-        form.popup-form>div.row>div.pull-left, form.popup-form>div.row>div>a.pull-right{
-            color: #fff;
-            text-align: left;
-        }
-        .icheckbox_minimal-white{
-            border: 2px solid #fff;
-            width: 20px;
-            height: 20px;
-        }
-        .icheckbox_minimal-white.checked {
-            background-position: -41px -1px;
-        }
-    }
-}
-.subscribe {
-    .btn-primary{
-        background: #00a8ff;
-    }
-    .btn-primary:hover{
-        color: #fff;
-    }
-}
-.profile-menu {
-    padding: 0px;
-    border: none;
-    button{
-        font-size: 16px;
-        background: transparent;
-        border: none;
-        padding: 14px 30px;
-        box-shadow: none;
-    }
-    .dropdown-menu > li > a{
-        padding: 14px 30px;
-    }
-}
 .core-body{
+    
+    /*********************/
+    /****Access menu*****/
+    /*********************/
+    .access {
+        font-size: 17px;
+        display: inline-block;
+        padding: 11px 30px;
+        span:hover{
+            text-decoration: underline;
+        }
+    }
+    #modalLogin{
+        .modal-popup{
+            form.popup-form>div.row>div.pull-left, form.popup-form>div.row>div>a.pull-right{
+                color: #fff;
+                text-align: left;
+            }
+            .icheckbox_minimal-white{
+                border: 2px solid #fff;
+                width: 20px;
+                height: 20px;
+            }
+            .icheckbox_minimal-white.checked {
+                background-position: -41px -1px;
+            }
+        }
+    }
+    .profile-menu {
+        padding: 0px;
+        border: none;
+        button{
+            font-size: 16px;
+            background: transparent;
+            border: none;
+            padding: 14px 30px;
+            box-shadow: none;
+        }
+        .dropdown-menu > li > a{
+            padding: 14px 30px;
+        }
+    }
     .container > .navbar-collapse{
         padding: 0;
     }
@@ -158,6 +153,80 @@
     top: 50px;
     padding: 0px;
 }
+
+
+/*********************/
+/*******LOGIN*********/
+/*********************/
+.container-login{
+    h2{
+        text-align: center;
+        font-size: 40px;
+    }
+    padding: 5em 0;
+    form[name="login"]{
+        input[type="text"],input[type="password"]{
+            background: #29323b;
+            color: #fff;
+        }
+    }
+}
+/*********************/
+/******REGISTER*******/
+/*********************/
+.container-register{
+    h2{
+        text-align: center;
+        font-size: 40px;
+    }
+    padding: 5em 0;
+    form[name="registration"]{
+        input[type="text"],input[type="password"], select{
+            background: #29323b;
+            color: #fff;
+        }
+        #registration_state{
+            padding-left: 10px;
+            padding-right: 5px;
+        }
+        #registration_country{
+            padding-left: 25px;
+            padding-right: 10px;
+        }
+    }
+}
+/*********************/
+/******RECOVERY*******/
+/*********************/
+.container-recovery{
+    padding: 5em 0;
+    h2{
+        text-align: center;
+        font-size: 40px;
+    }
+    form[name="recovery_email"]{
+        input[type="email"]{
+            background: #29323b;
+            color: #fff;
+        }
+    }
+}
+
+/*********************/
+/********BLOG*********/
+/*********************/
+.subscribe {
+    .btn-primary{
+        background: #00a8ff;
+    }
+    .btn-primary:hover{
+        color: #fff;
+    }
+}
+
+/*********************/
+/*******PROFILE*******/
+/*********************/
 .container-profile {
     .profile-img {   
         padding: 15px 0 0!important;
@@ -180,3 +249,4 @@
         padding: 20px 40px;
     }
 }
+
