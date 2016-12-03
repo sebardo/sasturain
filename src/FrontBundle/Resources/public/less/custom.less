@@ -16,6 +16,8 @@
     color: white;
 }
 .btn-core{
+    padding: 6px 12px;
+    font-size: 14px;
     background: #00a8ff;
     border: 2px solid transparent;
     border-radius: 2px;
@@ -111,6 +113,10 @@
                 color: #fff;
                 text-align: left;
             }
+            .btn-submit{
+                padding: 15px;
+                font-size: 18px;
+            }
             .icheckbox_minimal-white{
                 border: 2px solid #fff;
                 width: 20px;
@@ -169,6 +175,10 @@
             background: #29323b;
             color: #fff;
         }
+    }
+    button{
+        font-size: 18px;
+        padding: 15px
     }
 }
 /*********************/
@@ -248,22 +258,61 @@
         border-top: 1px solid #ddd;
         padding: 20px 40px;
     }
-    form[name="profile_user"], form[name="password"]{
-        label{
-            padding: 23px 15px;
+    
+    .tabs-left{
+        background: white;
+        margin-right: 1px;
+        min-height: 300px;
+        border-right: none;
+        z-index: 9;
+        position: inherit;
+        li.active{
+            background: white;
         }
-        input[type="text"], input[type="email"], input[type="password"]{
-            background: #29323b;
-            color: #fff;
+        li a{
+            padding: 15px 20px;
+        }  
+        li>a:hover {
+            background-color: transparent;
+            color: #000;
+            border-color: #eeeeee #ddd #eeeeee #eeeeee;
         }
+    } 
+    .tabs-content{
+        padding-left: 0px;
+        h1{
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        .tab-content{
+            padding: 20px 0 0 20px;
+            border-top: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            margin-left: -1px;
+            z-index: 0;
+            h3{
+                margin-bottom: 30px
+            }
+            form{
+                label{
+                    padding: 23px 15px;
+                }
+                input, select{
+                    background: #29323b;
+                    color: #fff;
+                }
+            }
+            .delivery-form, .address{
+                padding: 0;
+            }
+            .add-delivery{
+                margin-top: 4px;
+            }
+        }  
     }
-    .tabs-left li a{
-        padding: 15px 20px;
-    }
-    .profile {
-        h3{
-            margin-bottom: 30px
-        }
+    
+    .profile,  {
+        
         .account>div{
             margin-bottom: 50px;
         }
@@ -281,7 +330,6 @@
 /*****ECOMMERCE*******/
 /*********************/
 .cart-detail, .identification{
-    
     padding: 5em 0;
     
 }
