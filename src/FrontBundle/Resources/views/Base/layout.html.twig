@@ -32,6 +32,7 @@
         'bundles/front/less/custom.less'
         'bundles/admin/plugins/flagstrap/dist/css/flags.css'
         'bundles/admin/plugins/iCheck/minimal/_all.css'
+        'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'
     %}
         <link rel="stylesheet" href="{{ asset_url }}">
     {% endstylesheets %}
@@ -116,7 +117,15 @@
                 <div class="modal-content modal-popup">
                     <a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
                     <h3 class="white">Registrate</h3>
-                    <form action="" class="popup-form">
+                    
+                    {{ register_form({
+                        form_class: 'popup-form',
+                        input_class: 'form-white',
+                        icheck_class: 'minimal-white',
+                        button_submit_class: 'btn-submit'
+                    },'short') }}
+                    
+                    {#<form action="" class="popup-form">
                         <input type="text" class="form-control form-white" placeholder="Full Name">
                         <input type="text" class="form-control form-white" placeholder="Email Address">
                         <div class="dropdown">
@@ -137,7 +146,7 @@
                             </div>
                         </div>
                         <button type="submit" class="btn btn-submit">Enviar</button>
-                    </form>
+                    </form>#}
                 </div>
             </div>
         </div>
