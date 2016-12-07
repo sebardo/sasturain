@@ -110,8 +110,8 @@ hwi_oauth:
             client_secret:       DyaY1TkbFh1b643irHCs0pbMo009CWrwuD34LQvEqkvTZHfdAi
         google:
             type:                google
-            client_id:           43533348693-lhnjpmq8age0finbjb3e3hniviqhqbrp.apps.googleusercontent.com
-            client_secret:       VNg2Ap9fMghICwIVX46IzS0EK
+            client_id:           43533348693-5cc8rtt9u836lenact1l4dtprenq0m0j.apps.googleusercontent.com
+            client_secret:       xLP8Qcvqn3rBEMy5btOrSxfv
             scope:               "email profile"
             options:
                 access_type:     offline
