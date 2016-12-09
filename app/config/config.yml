@@ -92,11 +92,11 @@ assetic:
     node: "%node_path%"
     filters:
         cssrewrite:
-            apply_to: "\.css$"
+            apply_to: ".css$"
         less:
             node: "%node_path%"
             node_paths: ["%node_modules_path%"]
-            apply_to: "\.less$"
+            apply_to: ".less$"
 
 # OAuth login social networks  
 hwi_oauth:
@@ -120,11 +120,16 @@ hwi_oauth:
                 login_hint:      sub
         facebook:
             type:                facebook
-            client_id:           502605306534870
-            client_secret:       8e85bc722eff0f6485ebf08abad30f5b
+            client_id:           1743100236016760
+            client_secret:       7fcf396e2bcdfeff4a430c25d5405e84
             scope:               "email"
             options:
                 display: popup 
+        instagram:
+            type:                instagram
+            client_id:           dbd834deb2eb4a6e8bccd3d56c37c9cb
+            client_secret:       f38e792e45ad4f7ebdf3be71572c18e8
+            scope:               basic+comments+relationships
                 
 a2lix_i18n_doctrine:
     manager_registry: doctrine       # [1]
