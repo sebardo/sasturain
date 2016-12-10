@@ -127,9 +127,9 @@ hwi_oauth:
                 display: popup 
         instagram:
             type:                instagram
-            client_id:           dbd834deb2eb4a6e8bccd3d56c37c9cb
-            client_secret:       f38e792e45ad4f7ebdf3be71572c18e8
-            scope:               basic+comments+relationships
+            client_id:           13943a65e997457da0adb66abb4ef5c2
+            client_secret:       56a8dc30590d47f496d65623d60f100e
+            scope:               basic
                 
 a2lix_i18n_doctrine:
     manager_registry: doctrine       # [1]
