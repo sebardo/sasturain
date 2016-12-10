@@ -116,26 +116,7 @@
             text-decoration: underline;
         }
     }
-    #modalLogin{
-        .modal-popup{
-            form.popup-form>div.row>div.pull-left, form.popup-form>div.row>div>a.pull-right{
-                color: #fff;
-                text-align: left;
-            }
-            .btn-submit{
-                padding: 15px;
-                font-size: 18px;
-            }
-            .icheckbox_minimal-white{
-                border: 2px solid #fff;
-                width: 20px;
-                height: 20px;
-            }
-            .icheckbox_minimal-white.checked {
-                background-position: -41px -1px;
-            }
-        }
-    }
+    
     .profile-menu {
         padding: 0px;
         border: none;
@@ -173,6 +154,34 @@
 /*********************/
 /*******LOGIN*********/
 /*********************/
+#modalLogin, #modalRegister{
+    .oauth-buttons{
+        padding: 0 50px;
+        display: inline-block;
+    }
+    form[name="login"], form[name="registration_short"]{
+        margin: 10px 60px auto;
+        display: inline-block;
+    }   
+    .modal-popup{
+        form.popup-form>div.row>div.pull-left, form.popup-form>div.row>div>a.pull-right{
+            color: #fff;
+            text-align: left;
+        }
+        .btn-submit{
+            padding: 15px;
+            font-size: 18px;
+        }
+        .icheckbox_minimal-white{
+            border: 2px solid #fff;
+            width: 20px;
+            height: 20px;
+        }
+        .icheckbox_minimal-white.checked {
+            background-position: -41px -1px;
+        }
+    }
+}
 .container-login{
     h2{
         text-align: center;
