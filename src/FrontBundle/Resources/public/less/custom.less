@@ -1,3 +1,6 @@
+@import "../../../../vendor/sebardo/blog/BlogBundle/Resources/public/less/blog.less";
+@import "../../../../vendor/sebardo/core/CoreBundle/Resources/public/less/pages/oauth.less";
+
 /* 
     Created on : 04-oct-2016, 16:40:41
     Author     : sebastian
@@ -155,6 +158,9 @@
 /*******LOGIN*********/
 /*********************/
 #modalLogin, #modalRegister{
+    .popup-form .form-control {
+        margin: 0;
+    }
     .oauth-buttons{
         padding: 0 50px;
         display: inline-block;
@@ -162,6 +168,26 @@
     form[name="login"], form[name="registration_short"]{
         margin: 10px 60px auto;
         display: inline-block;
+        .added{
+            display: inline-block;
+            width: 100%;
+            color: #fff;
+            margin-bottom: 0;
+            >div:first-child{
+                text-align: left;
+            }
+            >div{
+                padding: 0;
+                a{
+                    color: #fff;
+                }
+            }
+        }
+        .checkboxes{
+            text-align: left;
+            color: #fff;
+            margin-bottom: 8px;
+        }
     }   
     .modal-popup{
         form.popup-form>div.row>div.pull-left, form.popup-form>div.row>div>a.pull-right{
@@ -171,6 +197,7 @@
         .btn-submit{
             padding: 15px;
             font-size: 18px;
+            margin-top: 0;
         }
         .icheckbox_minimal-white{
             border: 2px solid #fff;
