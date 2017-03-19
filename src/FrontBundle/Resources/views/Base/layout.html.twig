@@ -23,6 +23,7 @@
 {% block stylesheets %}
     {{ parent() }}
     {% stylesheets
+        'bundles/core/less/pages/oauth.less'
         'bundles/front/css/normalize.css'
         'bundles/front/css/owl.css'
         'bundles/front/css/animate.css'
@@ -137,7 +138,7 @@
                         button_submit_class: 'btn-submit'
                     }) }}
                     <h4 class="white">o accede con tu red social</h4>
-                    <div class="oauth-buttons">{{ oauth_buttons({no_text: true}) }}</div>
+                    <div class="oauth-buttons oauth-button-container">{{ oauth_buttons({no_text: true}) }}</div>
                 </div>
             </div>
         </div>
@@ -153,7 +154,7 @@
                         button_submit_class: 'btn-submit'
                     }, 'short') }}
                     <h4 class="white">o accede con tu red social</h4>
-                    <div class="oauth-buttons">{{ oauth_buttons({no_text: true}) }}</div>
+                    <div class="oauth-buttons oauth-button-container">{{ oauth_buttons({no_text: true}) }}</div>
                 </div>
             </div>
         </div>
