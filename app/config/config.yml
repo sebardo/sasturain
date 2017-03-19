@@ -1,6 +1,6 @@
 imports:
     - { resource: parameters.yml }
-    - { resource: "@CoreBundle/Resources/config/security.yml" }
+    - { resource: "@CoreBundle/Resources/config/security_oauth.yml" }
     - { resource: "@CoreBundle/Resources/config/services.yml" }
     - { resource: "@AdminBundle/Resources/config/services.yml" }
     - { resource: "@EcommerceBundle/Resources/config/services.yml" }
@@ -39,6 +39,7 @@ twig:
     strict_variables: "%kernel.debug%"
     globals:
         core: %core%
+        twig_global: "@twig.global"  
         
 # Doctrine Configuration
 doctrine:
@@ -104,6 +105,19 @@ hwi_oauth:
     firewall_names: [secured_area]
     target_path_parameter: /
     resource_owners:
+        test_connect:
+            type:                oauth2
+            client_id:           4_1f10ptc6pyqs0gkoog0cwcwokwkw04gsww4gsss8ogcswo48w4
+            client_secret:       43dqxml7kieck4ock04o0kow4c4k08s44kc0o008oosk880swk
+            access_token_url:    http://oauth.sasturain.com/oauth/v2/token
+            authorization_url:   http://oauth.sasturain.com/oauth/v2/auth
+            infos_url:           http://oauth.sasturain.com/me
+            scope:               "read"
+            user_response_class: HWI\Bundle\OAuthBundle\OAuth\Response\PathUserResponse
+            paths:
+                identifier: id
+                nickname:   username
+                realname:   username
         twitter:
             type:                twitter
             client_id:           WVdAUmB1txAvLPw8Y5l0ImLp1
@@ -170,3 +184,17 @@ ecommerce:
 #    delivery_expenses_type: by_percentage
 #    delivery_expenses_percentage: 0
 #    bank_account: 'ESXX XXX XXXX XXXX XXXX XXXX'
+
+# Translation Configuration
+asm_translation_loader:
+    driver: orm
+    history: true # default false
+    database:
+        entity_manager: default
+                
+dcs_dynamic_discriminator_map:
+    mapping:
+        baseactor:
+            entity: CoreBundle\Entity\BaseActor
+            map:
+                Actor: CoreBundle\Entity\Actor
