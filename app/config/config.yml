@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: "@CoreBundle/Resources/config/security_oauth.yml" }
     - { resource: "@CoreBundle/Resources/config/services.yml" }
+    - { resource: "@CoreExtraBundle/Resources/config/services.yml" }
     - { resource: "@AdminBundle/Resources/config/services.yml" }
     - { resource: "@EcommerceBundle/Resources/config/services.yml" }
     - { resource: "@FrontBundle/Resources/config/services.yml" }
@@ -89,7 +90,7 @@ assetic:
     debug:          "%kernel.debug%"
     use_controller: '%kernel.debug%'
     bundles:
-        [ CoreBundle, AdminBundle, BlogBundle, EcommerceBundle , FrontBundle ]
+        [ CoreBundle, CoreExtraBundle, AdminBundle, BlogBundle, EcommerceBundle , FrontBundle ]
     node: "%node_path%"
     filters:
         cssrewrite:
@@ -102,7 +103,7 @@ assetic:
 # OAuth login social networks  
 hwi_oauth:
      #name of the firewall in which this bundle is active, this setting MUST be set
-    firewall_names: [secured_area]
+    firewall_names: [user]
     target_path_parameter: /
     resource_owners:
         test_connect:
