@@ -4,8 +4,9 @@ imports:
     - { resource: "@CoreBundle/Resources/config/services_oauth.yml" }
     - { resource: "@CoreExtraBundle/Resources/config/services.yml" }
     - { resource: "@AdminBundle/Resources/config/services.yml" }
-    - { resource: "@EcommerceBundle/Resources/config/services.yml" }
     - { resource: "@FrontBundle/Resources/config/services.yml" }
+    - { resource: "@CatalogueBundle/Resources/config/services.yml" }
+    - { resource: "@PaymentBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -90,7 +91,7 @@ assetic:
     debug:          "%kernel.debug%"
     use_controller: '%kernel.debug%'
     bundles:
-        [ CoreBundle, CoreExtraBundle, AdminBundle, BlogBundle, EcommerceBundle , FrontBundle ]
+        [ CoreBundle, CoreExtraBundle, AdminBundle, BlogBundle , FrontBundle, CatalogueBundle ]
     node: "%node_path%"
     filters:
         cssrewrite:
@@ -102,17 +103,17 @@ assetic:
 
 # OAuth login social networks  
 hwi_oauth:
-     #name of the firewall in which this bundle is active, this setting MUST be set
+    #name of the firewall in which this bundle is active, this setting MUST be set
     firewall_names: [user]
     target_path_parameter: /
     resource_owners:
         test_connect:
             type:                oauth2
-            client_id:           6_4hh0tss5n7ggokk8cg8s0wg4cwk8k84k4wgo88w4c8w8skw4os.
-            client_secret:       3c0dflogo3404ws8k0g8k00ok8os8ws4w8kkgw4koogc88wgsk
-            access_token_url:    http://oauth.sasturain.com/oauth/v2/token
-            authorization_url:   http://oauth.sasturain.com/oauth/v2/auth
-            infos_url:           http://oauth.sasturain.com/me
+            client_id:           1_4d24ix6h9b28cwoso0gkkswgkogs40g4cwggc0480wgw84kokc
+            client_secret:       4hct37cfgh0kkgks4sk00w04wgkc4cs4g00g8k8sksocs0kcgk
+            access_token_url:    http://rest.dev/oauth/v2/token
+            authorization_url:   http://rest.dev/oauth/v2/auth
+            infos_url:           http://rest.dev/api/me
             scope:               "read"
             user_response_class: HWI\Bundle\OAuthBundle\OAuth\Response\PathUserResponse
             paths:
@@ -165,6 +166,23 @@ core:
     extended_layout: 'FrontBundle:Base:layout.html.twig'
     server_base_url: 'http://sasturain.dev'
     admin_email: admin@admin.com
+    dynamic_discriminator_map:
+        baseactor:
+            entity: CoreBundle\Entity\BaseActor
+            map:
+                Actor: CoreBundle\Entity\Actor
+        product:
+            entity:  CatalogueBundle\Entity\Product
+    #payment
+    currency_symbol: €
+    vat: 0.21
+    special_percentage_charge: 0
+    delivery_expenses_type: by_percentage
+    delivery_expenses_percentage: 0
+    bank_account: AB12 1234 1234 1234
+    address: Address 123
+    postal_code: 1234
+    city: City
 # If you want add item in admin menu use this example
 # dashboard:
 #    icon_class: 'fa fa-dashboard'
@@ -187,15 +205,6 @@ admin:
 blog:
 #    fixture_data: true    
 
-ecommerce:
-#    fixture_data: true
-#    currency_symbol: €
-#    advert_unit_price: 1
-#    vat: 0.21
-#    special_percentage_charge: 0
-#    delivery_expenses_type: by_percentage
-#    delivery_expenses_percentage: 0
-#    bank_account: 'ESXX XXX XXXX XXXX XXXX XXXX'
 
 # Translation Configuration
 asm_translation_loader:
@@ -203,10 +212,3 @@ asm_translation_loader:
     history: true # default false
     database:
         entity_manager: default
-                
-dcs_dynamic_discriminator_map:
-    mapping:
-        baseactor:
-            entity: CoreBundle\Entity\BaseActor
-            map:
-                Actor: CoreBundle\Entity\Actor

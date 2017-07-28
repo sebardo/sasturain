@@ -14,11 +14,17 @@ blog:
     resource: "@BlogBundle/Resources/config/routing.yml"
     prefix:   /
     
-ecommerce:
-    resource: "@EcommerceBundle/Resources/config/routing.yml"
-    prefix:   /
-    
 front:
     resource: "@FrontBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+catalogue:
+    resource: "@CatalogueBundle/Controller/"
+    type:     annotation
+    prefix:   /
+    
+payment:
+    resource: "@PaymentBundle/Controller/"
     type:     annotation
     prefix:   /

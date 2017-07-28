@@ -22,14 +22,14 @@ class AppKernel extends Kernel
             new A2lix\I18nDoctrineBundle\A2lixI18nDoctrineBundle(),
             new A2lix\TranslationFormBundle\A2lixTranslationFormBundle(),
             new Asm\TranslationLoaderBundle\AsmTranslationLoaderBundle(),
-            new DCS\DynamicDiscriminatorMapBundle\DCSDynamicDiscriminatorMapBundle(),
             new JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
 
             new CoreBundle\CoreBundle(),
             new CoreExtraBundle\CoreExtraBundle(),
             new AdminBundle\AdminBundle(),
             new BlogBundle\BlogBundle(),
-            new EcommerceBundle\EcommerceBundle(),
+            new CatalogueBundle\CatalogueBundle(),
+            new PaymentBundle\PaymentBundle(),
             new FrontBundle\FrontBundle(),
         );
 
